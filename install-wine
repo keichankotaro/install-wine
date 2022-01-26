@@ -1,0 +1,14 @@
+#! /bin/bash
+sudo dpkg --add-architecture i386
+sudo apt-get update
+sudo apt install -y wine64
+sudo apt install -y curl
+sudo curl -o /usr/share/applications/wine.desktop https://raw.githubusercontent.com/wine-mirror/wine/5c2d6211f6590d3856dc9188593b3d3597c8b441/loader/wine.desktop
+sudo apt remove -y curl
+sudo apt autoremove -y
+sudo apt install -y winetricks
+winetricks
+
+
+
+
